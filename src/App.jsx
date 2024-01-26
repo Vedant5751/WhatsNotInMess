@@ -1,16 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// App.js
+import React from 'react';
+import Card from './components/Card';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const cards = [
+    {
+      id: 1,
+      title: 'Java',
+      content: 'This is the content of Card 1.',
+      imageUrl: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg', // Sample image URL
+    },
+    {
+      id: 2,
+      title: 'Potheri',
+      content: 'This is the content of Card 2.',
+      imageUrl: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg', // Sample image URL
+    },
+    {
+      id: 3,
+      title: '2nd year',
+      content: 'This is the content of Card 3.',
+      imageUrl: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg', // Sample image URL
+    },
+  ];
+
+  const handleCardClick = (id) => {
+    console.log(`Card ${id} clicked`);
+    // Add your logic to handle the click event here
+  };
 
   return (
     <>
-      <h1>hello</h1>
+      <div className="container mx-auto">
+        <h1 className="text-5xl font-bold text-center my-8">What's not in mess</h1>
+        <div className="flex flex-wrap justify-center">
+          {cards.map((card) => (
+            <Card
+              key={card.id}
+              title={card.title}
+              content={card.content}
+              imageUrl={card.imageUrl}
+              onClick={() => handleCardClick(card.id)}
+            />
+          ))}
+        </div>
+      </div>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
