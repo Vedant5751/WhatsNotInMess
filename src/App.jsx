@@ -2,6 +2,9 @@
 import React from 'react';
 import Card from './components/Card';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import Details from './pages/Details';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const cards = [
@@ -32,9 +35,11 @@ function App() {
 
   return (
     <>
+    <Router>
       <div className="container mx-auto">
         <h1 className="text-5xl font-bold text-center my-8">What's not in mess</h1>
-        <div className="flex flex-wrap justify-center">
+        
+        {/* <div className="flex flex-wrap justify-center">
           {cards.map((card) => (
             <Card
               key={card.id}
@@ -44,9 +49,15 @@ function App() {
               onClick={() => handleCardClick(card.id)}
             />
           ))}
-        </div>
+        </div> */}
+        <Routes>
+        <Route path='' element={<Home/>}/>
+        <Route path='/detail' element={<Details/>}/>
+        </Routes>
+        
       </div>
       <Footer />
+      </Router>
     </>
   );
 }
