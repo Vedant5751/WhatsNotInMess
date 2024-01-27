@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function SecondYear() {
+function SecondYear() {
   return (
     <div>SecondYear</div>
   )
 }
+
+export default SecondYear

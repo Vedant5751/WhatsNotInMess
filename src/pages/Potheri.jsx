@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Potheri() {
+function Potheri() {
   return (
     <div>Potheri</div>
   )
 }
+
+export default Potheri
