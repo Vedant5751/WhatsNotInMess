@@ -1,15 +1,7 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react'
 
-function Details() {
-  const { id } = useParams();
-
+export default function Java() {
   return (
-    <div>
-      <h2>Details for Card {id}</h2>
-      {/* Add additional details based on the card ID */}
-    </div>
-  );
+    <div>Java</div>
+  )
 }
-
-export default Details;
