@@ -1,6 +1,7 @@
 // Home.js
 import React from 'react';
 import Card from '../components/Card';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const cards = [
@@ -27,13 +28,18 @@ function Home() {
   return (
     <div className="flex flex-wrap justify-center">
       {cards.map((card) => (
+        <Link key={card.id} to={`/details/${card.id}`}>
             <Card
               key={card.id}
+              
               title={card.title}
               content={card.content}
               imageUrl={card.imageUrl}
               onClick={() => handleCardClick(card.id)}
+              
             />
+            </Link>
+            
           ))}
     </div>
   );

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 function Card({ title, content, imageUrl, onClick }) {
   return (
-    <Link to='/home'>
-    <a href="www.google.com" onClick={onClick}>
+    // <Link to='/home'>
+    // <a href="www.google.com" onClick={onClick}>
       <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
         <img className="w-full h-64 object-cover" src={imageUrl} alt={title} />
         <div className="px-6 py-4">
@@ -13,8 +13,8 @@ function Card({ title, content, imageUrl, onClick }) {
           <p className="text-gray-700 text-base">{content}</p>
         </div>
       </div>
-    </a>
-    </Link>
+    // </a>
+    // </Link>
   );
 }
 
