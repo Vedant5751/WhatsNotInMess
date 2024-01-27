@@ -19,7 +19,7 @@ function Home() {
     },
     {
       id: 3,
-      title: '2nd year',
+      title: 'SecondYear',
       content: 'This is the content of Card 3.',
       imageUrl: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg',
     },
