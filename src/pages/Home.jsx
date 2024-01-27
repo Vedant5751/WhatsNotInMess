@@ -7,18 +7,21 @@ function Home() {
   const cards = [
     {
       id: 1,
+      route: 'java',
       title: 'Java',
       content: 'This is the content of Card 1.',
       imageUrl: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg',
     },
     {
       id: 2,
+      route: 'potheri',
       title: 'Potheri',
       content: 'This is the content of Card 2.',
       imageUrl: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg',
     },
     {
       id: 3,
+      route: 'secondyear',
       title: 'SecondYear',
       content: 'This is the content of Card 3.',
       imageUrl: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg',
@@ -28,7 +31,7 @@ function Home() {
   return (
     <div className="flex flex-wrap justify-center">
       {cards.map((card) => (
-        <Link key={card.id} to={`/${card.title}`}>
+        <Link  to={`/${card.route}`}>
             <Card
               key={card.id}
               
