@@ -8,7 +8,7 @@ export default function Footer() {
         <span ><a href="https://github.com/Vedant5751" target ="blank" className = "hover:text-sky-400">Vedant Patil |</a></span>
         <span className= "mx-2"><a href="https://github.com/Augnik03" target ="blank" className = "hover:text-sky-400">Augnik Banerjee</a></span>
       </div>
-      <a href= "https://github.com/Vedant5751/WhatsNotInMess" className= "mr-5"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/code-fork.png"/></a>
+      <a href= "https://github.com/Vedant5751/WhatsNotInMess" target= "blank" className= "mr-5"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/code-fork.png"/></a>
     </footer>
   )
 }
