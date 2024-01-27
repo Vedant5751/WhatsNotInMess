@@ -28,7 +28,7 @@ function Home() {
   return (
     <div className="flex flex-wrap justify-center">
       {cards.map((card) => (
-        <Link key={card.id} to={`/details/${card.id}`}>
+        <Link key={card.id} to={`/${card.title}`}>
             <Card
               key={card.id}
               
