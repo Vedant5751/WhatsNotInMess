@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-[rgb(196,255,255)] rounded-lg shadow  dark:bg-gray-800">
         <div className="w-full md:flex md:items-center md:justify-between">
-          <span className="text-sm m-4 text-gray-900 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" className="hover:underline">What'sNotInMess™</a>. All Rights Reserved.
+          <span className="text-sm m-4 text-gray-900 sm:text-center dark:text-gray-400">© 2024 What'sNotInMess™. All Rights Reserved.
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-900 dark:text-gray-400 sm:mt-0">
             <li>
