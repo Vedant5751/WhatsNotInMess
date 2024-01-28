@@ -29,12 +29,11 @@ function Home() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center bg-[rgb(142,167,233)]">
       {cards.map((card) => (
         <Link  to={`/${card.route}`}>
             <Card
               key={card.id}
-              
               title={card.title}
               content={card.content}
               imageUrl={card.imageUrl}

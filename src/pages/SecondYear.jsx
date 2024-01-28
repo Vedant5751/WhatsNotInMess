@@ -57,7 +57,7 @@ function SecondYear() {
   };
 
   return (
-    <div>
+    <div className='bg-[rgb(142,167,233)]'>
       <h1>SecondYear</h1>
       <div className="flex flex-wrap justify-center">
         {restaurants.map((restaurant) => (
