@@ -7,10 +7,10 @@ function Java() {
   const restaurants = [
     {
       id: 1,
-      name: 'Restaurant 1',
+      name: 'Butty ',
       picture: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg',
-      menu: 'HAha',
-      location: 'Location 1',
+      location: 'Java',
+      phone: ['Sample no. ', 'Sample no. ', 'Sample no. '],
       menu: ['Item 1', 'Item 2', 'Item 3'],
     },
     {
@@ -18,6 +18,7 @@ function Java() {
       name: 'Restaurant 2',
       picture: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg',
       location: 'Location 1',
+      phone: ['Sample no. ', 'Sample no. ', 'Sample no. '],
       menu: ['Item 1', 'Item 2', 'Item 3'],
     },
     {
@@ -25,6 +26,7 @@ function Java() {
       name: 'Restaurant 3',
       picture: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg',
       location: 'Location 1',
+      phone: ['Sample no. ', 'Sample no. ', 'Sample no. '],
       menu: ['Item 1', 'Item 2', 'Item 3'],
     },
     {
@@ -32,6 +34,7 @@ function Java() {
       name: 'Restaurant 4',
       picture: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg',
       location: 'Location 1',
+      phone: ['Sample no. ', 'Sample no. ', 'Sample no. '],
       menu: ['Item 1', 'Item 2', 'Item 3'],
     },
     {
@@ -39,6 +42,7 @@ function Java() {
       name: 'Restaurant 5',
       picture: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg',
       location: 'Location 1',
+      phone: ['Sample no. ', 'Sample no. ', 'Sample no. '],
       menu: ['Item 1', 'Item 2', 'Item 3'],
     },
     {
@@ -46,6 +50,7 @@ function Java() {
       name: 'Restaurant 6',
       picture: 'https://assets.architecturaldigest.in/photos/61db1eed472e5c4d0d4c8dd8/3:2/w_5973,h_3982,c_limit/Main%20seating%20area%20Ekaa.jpg',
       location: 'Location 1',
+      phone: ['Sample no. ', 'Sample no. ', 'Sample no. '],
       menu: ['Item 1', 'Item 2', 'Item 3'],
     },
     // Add more restaurant data as needed
@@ -68,6 +73,9 @@ function Java() {
             picture={restaurant.picture}
             location={restaurant.location}
             menu={restaurant.menu}
+            phone={restaurant.phone.map((number) => (
+              <p key={number}>{number}</p>
+            ))}
             onClick={() => handleCardClick(restaurant.id)}
           />
         ))}

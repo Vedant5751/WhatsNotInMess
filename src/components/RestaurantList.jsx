@@ -1,7 +1,7 @@
 // RestaurantCard.js
 import React, { useState } from 'react';
 
-function RestaurantCard({ name, picture, location, menu, onClick }) {
+function RestaurantCard({ name, picture, location, menu, phone, onClick }) {
     const [showDetail, setShowDetail] = useState(false);
 
     const handleReadMoreClick = () => {
@@ -13,7 +13,7 @@ function RestaurantCard({ name, picture, location, menu, onClick }) {
     };
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const images = [picture, 'picture, picture, picture, picture' ]; // Add more image URLs here
+    const images = [picture, picture, picture, picture, picture ]; // Add more image URLs here
 
     const handlePrevClick = () => {
         setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
@@ -60,7 +60,7 @@ function RestaurantCard({ name, picture, location, menu, onClick }) {
 
             {showDetail && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="relative bg-white w-3/4 h-3/4 rounded-lg">
+                    <div className="relative bg-white w-1/2 h- rounded-lg">
                         <button
                             className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
                             onClick={handleCloseClick}
@@ -68,7 +68,7 @@ function RestaurantCard({ name, picture, location, menu, onClick }) {
                             X
                         </button>
                         <div className="flex">
-                            <div className="m-4 max-w-sm border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
+                            <div className="m-4 w-1/2 border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
                                 <div className="flex">
                                     <div className=''>
                                             <img className="object-scale-down" src={images[currentImageIndex]} alt={name} />
@@ -92,6 +92,7 @@ function RestaurantCard({ name, picture, location, menu, onClick }) {
                             <div className="w-1/2 p-4">
                                 <h2 className="text-2xl font-bold mb-4">{name}</h2>
                                 <p>{location}</p>
+                                <p>{phone}</p>
                                 {/* Add more text content here */}
                             </div>
                         </div>
