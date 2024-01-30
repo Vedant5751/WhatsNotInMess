@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className="bg-[rgb(196,255,255)] rounded-lg shadow  dark:bg-gray-800">
+    <footer className="bg-[rgb(196,255,255)]  shadow  dark:bg-gray-800">
         <div className="w-full md:flex md:items-center md:justify-between">
           <span className="text-sm m-4 text-gray-900 sm:text-center dark:text-gray-400">© 2024 What'sNotInMess™. All Rights Reserved.
         </span>
