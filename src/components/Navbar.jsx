@@ -11,14 +11,15 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl flex flex-row flex-nowrap items-center justify-between mx-auto p-4">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="./Logo.svg" className="h-10" alt="" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            What's not in mess
+          <span className="self-center sm:text-xl lg:text-2xl font-semibold whitespace-wrap dark:text-white">
+            What's Not In Mess
           </span>
         </div>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+
           <DarkModeToggle />
           <button
             data-collapse-toggle="navbar-cta"
@@ -30,7 +31,7 @@ export default function Navbar() {
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className="w-5 h-5"
+              className="w-5 h-4"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -45,18 +46,18 @@ export default function Navbar() {
               />
             </svg>
           </button>
+
         </div>
         <div
-          className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
-            isOpen ? 'block' : 'hidden'
-          }`}
+          className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? 'block' : 'hidden'
+            }`}
           id="navbar-cta"
         >
           <ul className={`flex flex-col md:flex-row md:items-center font-medium p-4 md:p-0 mt-4 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ${isOpen ? 'md:w-full' : ''}`}>
             <li className="md:mx-auto">
               <Link
                 to="/"
-                className="block py-2 px-3 md:pr-8 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block pb-4 px-3 md:pr-8 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 onClick={() => {
                   setIsOpen(false);
                 }}
@@ -67,7 +68,7 @@ export default function Navbar() {
             <li className="md:mx-auto mt-4 md:mt-0">
               <Link
                 to="/detail"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block pb-4 px-3 md:pr-8 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 onClick={() => {
                   setIsOpen(false);
                 }}
